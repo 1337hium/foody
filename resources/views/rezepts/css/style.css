@@ -1,0 +1,241 @@
+h6 span { 
+   color: white; 
+   font: bold 18px/45px Helvetica, Sans-Serif; 
+   letter-spacing: 1px;  
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.4);
+   padding: 10px; 
+}
+.image { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+h6 { 
+   position: absolute; 
+   bottom: -10px; 
+   left: 0; 
+   width: 100%; 
+}
+.grid-item { width: 20%; }
+
+.grid-item--width2 { width: 120px; }
+.grid-item--height2 { height: 120px; }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column1 {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column1 img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column1 {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column1 {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.jg {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.jg > a, .jg::after {
+  --ratio: calc(var(--w) / var(--h));
+  --row-height: 9rem;
+  flex-basis: calc(var(--ratio) * var(--row-height));
+}
+
+.jg > a {
+  margin: 0.25rem;
+  flex-grow: calc(var(--ratio) * 100);
+}
+
+.jg::after {
+  --w: 2;
+  --h: 1;
+  content: '';
+  flex-grow: 1000000;
+}
+
+.jg > a > img {
+  display: block;
+  width: 100%;  
+}
+
+.1wrapper {
+        width: 800px;
+        margin: 0 auto;
+}
+.wrapper {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.image-row {
+	width: 100%;
+	white-space:nowrap;
+	line-height: 0;
+}
+
+.image-row img {
+	margin-right:5px;
+	margin-bottom:5px;
+}
+
+/* Container holding the image and the text */
+.container1 {
+    width: 27%;
+    position: relative;
+    display: inline-block;
+}
+
+/* Bottom right text */
+.text-block1 {
+    position: absolute;
+    background-color: hsla(0, 0%, 100%, 0.5);
+    color: black;
+    bottom: 50%;
+    width: 100%;
+    line-height: 2em;
+    text-align: center;
+
+}
+
+.bildmitbildunterschrift {
+    width: 320px;
+    position: relative;
+    border: 5px solid red;
+}
+.bildmitbildunterschrift span {
+    background-color: silver;
+    background-color: hsla(0, 0%, 100%, 0.5);
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    line-height: 2em;
+    text-align: center;
+}
+body {
+	background: #d9d7cb;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #9d9892;
+    line-height: 30px;
+    text-align: center;
+}
+
+strong { font-weight: 600; }
+
+a, a:hover, a:focus {
+	color: #d05a4e;
+	text-decoration: none;
+    -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+}
+
+h1, h2 {
+	margin-top: 10px;
+	font-size: 30px;
+    font-weight: 600;
+    color: #615c58;
+    line-height: 42px;
+}
+
+h3 {
+	font-size: 22px;
+    font-weight: 300;
+    color: #615c58;
+    line-height: 30px;
+}
+
+img { max-width: 100%; }
+
+::-moz-selection { background: #d05a4e; color: #fff; text-shadow: none; }
+::selection { background: #d05a4e; color: #fff; text-shadow: none; }
+
+
+/***** Top content *****/
+
+.inner-bg {
+    padding: 40px 0 170px 0;
+}
+
+.top-content h1 { color: #fff; }
+
+.top-content .description {
+	margin: 20px 0 10px 0;
+	color: #fff;
+}
+
+.top-content .description a { color: #fff; border-bottom: 2px dotted #fff; }
+.top-content .description a:hover,
+.top-content .description a:focus { border: 0; }
+
+.top-content .top-big-link {
+	margin-top: 35px;
+}
+
+.form-box {
+	padding-top: 40px;
+}
+
+.form-top {
+	padding: 25px 25px 15px 25px;
+	background: #f7f4ed;
+	text-align: left;
+}
+
+.form-top h3 { margin-top: 0; }
+
+.form-bottom {
+	padding: 25px 25px 30px 25px;
+	background: #fff;
+	text-align: left;
+}
+
+.form-bottom form textarea {
+	height: 100px;
+}
+
+.form-bottom form .input-error {
+	border-color: #d05a4e;
+}
+
+
+/***** Media queries *****/
+
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+@media (min-width: 768px) and (max-width: 991px) {}
+
+@media (max-width: 767px) {
+
+	.inner-bg { padding: 40px 0 110px 0; }
+
+}
+
+.light-bg {
+    border-color: #d05a4e!important;
+}
+
