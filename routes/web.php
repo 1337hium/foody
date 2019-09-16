@@ -15,7 +15,7 @@ URL::forceScheme('https');
 Route::resource('rezepts', 'RezeptController');
 Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'LanguageController@switchLang']);
 Route::get('all', 'RezeptController@all')->name('rezepts.all');
-Auth::routes(['register' => false]);
+Auth::routes(['register' => true]);
 Route::post('/category', 'RezeptController@category')->name('rezepts.category');
 
 
