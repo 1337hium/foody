@@ -1,6 +1,6 @@
 ## About FoodY
 
-Self-Hosted Receip management!
+Self-Hosted Recipe management!
 Im not a Webdev (as you can see in the code ;) ) but i love thinkering. So here we are, it "works", but it isn't professional.
 If you want to change it, go ahead an fork it :)
 
@@ -24,6 +24,7 @@ If you want to change it, go ahead an fork it :)
 
 ## ToDo
 - Do we need the original pictures?
+- change "add" Layout
 - change filtering
 - clean routes
 - clean code
