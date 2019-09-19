@@ -1,9 +1,10 @@
-## ToDo
-- edit .env.sample
-
 ## About FoodY
 
-Rezeptverwaltung Self-Hosted!
+Self-Hosted Receip management!
+Im not a Webdev (as you can see in the code ;) ) but i love thinkering. So here we are, it "works", but it isn't professional.
+If you want to change it, go ahead an fork it :)
+
+"Demo" https://foody2.3473.ch
 
 ## Installing
 
@@ -15,20 +16,16 @@ Rezeptverwaltung Self-Hosted!
 - sudo chown -R www-data:www-data foody
 - `php artisan migrate`
 - `php artisan key:generate`
-
 - routes/web.php change Line 18 to 'Auth::routes(['register' => true]);'
 - got to https://your.app.url/register and register your user
 - change routes/web.php back to false
-
-Once you are set running, go back to .env and change
-
-`APP_DEBUG=true`
-
-to
-
-`APP_DEBUG=false`
-
-This will prevent the error screen to show in case of error and will just return a code 500.
+- mkdir public/upload/thumb
 
 
-
+## ToDo
+- Do we need the original pictures?
+- change filtering
+- clean routes
+- clean code
+- Multiuser?
+- ?
