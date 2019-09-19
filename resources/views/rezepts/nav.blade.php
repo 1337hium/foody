@@ -88,7 +88,7 @@ Compiled and minified CSS -->
             }
 
         </style>
-        <nav>
+        <nav class="no-print">
             <div class="nav-wrapper black">
                 <a href="{{ route('rezepts.index') }}" class="brand-logo">FoodY</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
