@@ -4,6 +4,8 @@ Self-Hosted Receip management!
 Im not a Webdev (as you can see in the code ;) ) but i love thinkering. So here we are, it "works", but it isn't professional.
 If you want to change it, go ahead an fork it :)
 
+"Demo" https://foody2.3473.ch
+
 ## Installing
 
 - Clone this Repo
