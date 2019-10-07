@@ -28,6 +28,8 @@
 
     .column1 img {
         margin-top: 1px;
+            flex: 100%;
+            max-width: 100%;
         /*     margin-left: 10px;
      */
         vertical-align: middle;
@@ -36,13 +38,13 @@
     /* Responsive layout - makes a two column-layout instead of four columns */
     @media screen and (max-width: 800px) {
         .column1 {
-            flex: 50%;
-            max-width: 50%;
+            flex: 100%;
+            max-width: 100%;
         }
     }
 
     /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 700px) {
         .column1 {
             flex: 100%;
             max-width: 100%;
@@ -60,17 +62,6 @@
         font-weight: 600;
     }
 
-    a,
-    a:hover,
-    a:focus {
-        color: #d05a4e;
-        text-decoration: none;
-        -o-transition: all .3s;
-        -moz-transition: all .3s;
-        -webkit-transition: all .3s;
-        -ms-transition: all .3s;
-        transition: all .3s;
-    }
 
     h1 {
         margin-top: 10px;
@@ -125,15 +116,19 @@
         overflow: hidden;
         max-width: 100%;
         height: auto;
-    }
+    
+ background-color: var(--main-bg);
+}
 
     .hvrbox img {
         max-width: 100%;
+ border-radius: 0px;
     }
 
     .hvrbox .hvrbox-layer_bottom {
         display: block;
-    }
+
+}
 
     .hvrbox .hvrbox-layer_top {
         opacity: 0;
@@ -144,8 +139,8 @@
         bottom: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.6);
-        color: #fff;
+        background:rgba(0, 0, 0, 0.6);
+        color: var(--main-color);
         padding: 15px;
         -moz-transition: all 0.4s ease-in-out 0s;
         -webkit-transition: all 0.4s ease-in-out 0s;
@@ -159,6 +154,7 @@
     }
 
     .hvrbox .hvrbox-text {
+color:var(--main-color);
         text-align: center;
         font-size: 18px;
         display: inline-block;
@@ -182,7 +178,7 @@
     }
 
     .hvrbox.active .hvrbox-text_mobile {
-        display: block;
+        display: inline;
     }
 
 </style>

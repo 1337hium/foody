@@ -138,6 +138,7 @@ class RezeptController extends Controller
      */
     public function show($id)
     {
+
         $rezept = Rezept::find($id);
         return view('rezepts.show', array('rezept' => $rezept));
     }

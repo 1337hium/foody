@@ -43,5 +43,6 @@ return [
     'all' => 'Alle',
     'rz_new'  => 'Neue Rezepte',
     'filter'  => 'Filtern',
-    'added'  => 'Rezept wurde hinzugefügt',
+    'added'  => 'Rezept hinzugefügt',
+    'filter1'  => 'Filter wählen',
 ];

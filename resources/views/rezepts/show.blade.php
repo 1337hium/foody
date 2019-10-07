@@ -19,7 +19,6 @@
         </div>
         <span style="font-size: 15pt">
             <div class="col-sm-8" align="left">
-
                 <h1>{{ trans('sentence.rz')}}: {{ $rezept->name }}</h1>
                 <ul>
                     {{ trans('sentence.category')}}:
@@ -54,7 +53,7 @@
                     @endif
                     <li>{{ trans('sentence.time')}}: {{ $rezept->time }}</li>
                     <li>{{ trans('sentence.persons')}}: {{ $rezept->persons }}</li>
-                    <li>{{ trans('sentence.added')}}: {{ $rezept->added }}</li>
+                    <li>{{ trans('sentence.added')}}: {{ \Carbon\Carbon::parse($rezept->added)->format('d.m.Y')}}</li>
                 </ul>
 
                 <span style="font-size: 15pt">
