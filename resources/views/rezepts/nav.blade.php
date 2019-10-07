@@ -39,6 +39,55 @@ Compiled and minified CSS -->
 
     <body>
         <style>
+:root {
+    --main-color:#ff9633;
+    --light-color:#ffbe33;
+    --grey:#6B6E70;
+    --main-bg:#222629;
+    --light-bg:#31373b;
+    --main-color1:#61892F;
+    --light-color1:#86C232;
+    --grey1:#6B6E70;
+    --main-bg1:#222629;
+    --light-bg1:#31373b;
+
+}
+.card {
+                background-color: var(--main-bg)!important;
+}
+.card-header {
+                background-color: var(--light-bg)!important;
+}
+nav {
+                background-color: var(--main-bg)!important;
+}
+.form-control {
+                background-color: var(--main-bg)!important;
+border:none;
+}
+h1 {
+color: var(--main-color);
+}
+
+body {
+                background-color: var(--light-bg);
+                color: var(--grey);
+}
+a {
+        color: var(--main-color);
+}
+    a:hover,
+    a:focus {
+        color:var(--light-color);
+        text-decoration: none;
+        -o-transition: all .3s;
+        -moz-transition: all .3s;
+        -webkit-transition: all .3s;
+        -ms-transition: all .3s;
+        transition: all .3s;
+    }
+
+
             input.search-query {
                 background-color: #f47443;
                 color: white;
@@ -62,9 +111,6 @@ Compiled and minified CSS -->
                     display: none !important;
                 }
             }
-
-        </style>
-        <style>
             #topbarsearch .input-field .prefix {
                 width: 0rem !important;
             }
@@ -87,12 +133,158 @@ Compiled and minified CSS -->
                 height: 20px
             }
 
+input::placeholder {
+    color: var(--main-color);
+}
+input {
+  border-bottom: 2px solid var(--main-color)!important;
+  color:var(--light-color)!important;
+  box-shadow:var(--main-color)!important;
+}
+input.active {
+  border-bottom: 2px solid var(--light-color)!important;
+}
+nav .brand-logo {
+    color: var(--main-color);
+}
+
+nav ul li a{
+    color: var(--main-color);
+}
+input.textblack {
+    color:white;
+}
+.sidenav {
+        background-color: var(--main-bg)!important;
+    color:white!important;
+}
+
+    .sidenav.a:hover,
+    .sidenav.a:focus
+{
+        color: var(--light-color);
+        text-decoration: none;
+        -o-transition: all .3s;
+        -moz-transition: all .3s;
+        -webkit-transition: all .3s;
+        -ms-transition: all .3s;
+        transition: all .3s;
+
+} 
+.textwhite {
+        color: var(--main-color)!important;
+}
+
+.btn {
+  background-color: var(--light-color);
+  border: none;
+                color: var(--main-bg);
+}
+.btn:hover {
+  background-color: var(--main-color);
+  border: none;
+                color: var(--main-bg);
+}
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+.page-item .page-link {
+    z-index: 1;
+    color: var(--main-bg);
+    background-color: var(--light-color);
+    border-color: var(--light-color);
+}
+
+.page-item:hover .page-link:hover {
+    z-index: 1;
+    color: var(--main-bg);
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+
+.page-item.disabled .page-link {
+    z-index: 1;
+    color: var(--main-bg);
+    background-color: var(--light-color);
+    border-color: var(--light-color);
+}
+.select-wrapper input.select-dropdown:focus {
+    border-bottom: 1px solid var(--light-color);
+}
+.select-wrapper {
+    position: relative;
+    color: var(--light-color);
+    border-color: var(--light-color);
+}
+.select-wrapper input.select-dropdown {
+    position: relative;
+    cursor: pointer;
+color: var(--light-color);
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    outline: none;
+    height: 3rem;
+    line-height: 3rem;
+    width: 100%;
+    font-size: 16px;
+    margin: 0 0 8px 0;
+    padding: 0;
+    display: block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 1;
+    border-color: var(--light-color);
+}
+.dropdown-content {
+    background-color: var(--light-bg);
+color: var(--light-color);
+    margin: 0;
+    display: none;
+    min-width: 100px;
+    overflow-y: auto;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    border-color: var(--light-color);
+border: 2px;
+}
+.dropdown-content li>a, .dropdown-content li>span {
+    font-size: 16px;
+    color: var(--light-color);
+    display: block;
+    line-height: 22px;
+    padding: 14px 16px;
+}
+
+
+.dropdown-content a:hover {
+    color: var(--light-bg);
+background-color: var(--light-color);
+}
+
+
+
+
+table, th, td {
+    border-color: var(--light-bg)!important;
+}
         </style>
         <nav class="no-print">
-            <div class="nav-wrapper black">
+            <div class="nav-wrapper">
                 <a href="{{ route('rezepts.index') }}" class="brand-logo">FoodY</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down black">
+                <ul class="right hide-on-med-and-down">
                     @guest
                     <li>
                         <form action="/search" method="POST" role="search">
@@ -188,18 +380,18 @@ Compiled and minified CSS -->
             @endguest
 
         </nav>
-        <ul class="sidenav" id="mobile-demo">
+        <ul class="sidenav dark" id="mobile-demo">
             @guest
             <li>
                 <form action="/search" method="POST" role="search">
                     @csrf
-                    <input id="search" class="search-query" placeholder="{{ trans('sentence.search')}}" type="search"
+                    <input id="search" class="search-query textblack" placeholder="{{ trans('sentence.search')}}" type="search"
                         name="q" required>
                 </form>
             </li>
-            <li><a href="{{ route('login') }}">{{ __('Login') }}</a>
+            <li><a class="textwhite" href="{{ route('login') }}">{{ __('Login') }}</a>
             </li>
-            <li><a class="dropdown-trigger" href="#!"
+            <li><a class="dropdown-trigger textwhite" href="#!"
                     data-target="dropdown_m1">{{ Config::get('languages')[App::getLocale()] }}<i
                         class="material-icons right">arrow_drop_down</i></a>
             </li>
@@ -207,7 +399,7 @@ Compiled and minified CSS -->
                 @foreach (Config::get('languages') as $lang => $language)
                 @if ($lang != App::getLocale())
                 <li>
-                    <a class="dropdown-item" href="{{ route('lang.switch', $lang) }}">{{$language}}</a>
+                    <a class="textwhite" class="dropdown-item" href="{{ route('lang.switch', $lang) }}">{{$language}}</a>
                 </li>
                 @endif
                 @endforeach
@@ -221,17 +413,17 @@ Compiled and minified CSS -->
                 </form>
             </li>
             <li>
-                <a class="dropdown-trigger" href="#!"
+                <a class="dropdown-trigger textwhite" href="#!"
                     data-target="dropdown_m1">{{ Config::get('languages')[App::getLocale()] }}<i
                         class="material-icons right">arrow_drop_down</i>
                 </a>
             </li>
                     <li>
-                        <a href="{{ route('rezepts.category') }}">{{ trans('sentence.rz')}}</a>
+                        <a class="textwhite" href="{{ route('rezepts.category') }}">{{ trans('sentence.rz')}}</a>
                     </li>
 
             <li>
-                <a class="dropdown-trigger" href="#!" data-target="dropdown_m_user">
+                <a class="dropdown-trigger textwhite" href="#!" data-target="dropdown_m_user">
                     @if (auth()->user()->image)
                     <img src="{{ asset(auth()->user()->image) }}"
                         style="width: 40px; height: 40px; border-radius: 50%;">
@@ -267,7 +459,7 @@ Compiled and minified CSS -->
                 @endforeach
                 @endguest
                     <li>
-                        <a href="{{ route('rezepts.category') }}">{{ trans('sentence.rz')}}</a>
+                        <a class="textwhite" href="{{ route('rezepts.category') }}">{{ trans('sentence.rz')}}</a>
                     </li>
             
 </ul>

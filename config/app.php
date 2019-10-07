@@ -93,8 +93,8 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
-
+    'fallback_locale' => 'de',
+'useAcceptLanguageHeader' => false,
     /*
     |--------------------------------------------------------------------------
     | Faker Locale

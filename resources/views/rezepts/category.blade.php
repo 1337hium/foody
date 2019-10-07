@@ -23,10 +23,9 @@
 -->
 
 {{ csrf_field() }}
-            <label>{{ trans('sentence.category')}}</label>
             <div class="input-field col s12">
             <select name="category" id="category">
-<option value="">Select...</option>
+<option value="">{{ trans('sentence.filter1')}}...</option>
                     <option value="1">{{ trans('sentence.category1')}}</option>
                     <option value="2">{{ trans('sentence.category2')}}</option>
                     <option value="3">{{ trans('sentence.category3')}}</option>

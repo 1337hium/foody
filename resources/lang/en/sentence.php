@@ -44,4 +44,5 @@ return [
     'rz_new'  => 'New Recipes',
     'filter'  => 'Filter',
     'added'  => 'Recipe has been added',
+    'filter1'  => 'Select filter',
 ];
