@@ -109,30 +109,30 @@
 
 
 
-        </div>
-
-        <label>{{ trans('sentence.category')}}</label>
-        <div class="input-field col s12">
-            <select name="category" id="category">
-                <option value="1">{{ trans('sentence.category1')}}</option>
-                <option value="2">{{ trans('sentence.category2')}}</option>
-                <option value="3">{{ trans('sentence.category3')}}</option>
-                <option value="4">{{ trans('sentence.category4')}}</option>
-                <option value="5">{{ trans('sentence.category5')}}</option>
-                <option value="6">{{ trans('sentence.category6')}}</option>
-                <option value="7">{{ trans('sentence.category7')}}</option>
-                <option value="8">{{ trans('sentence.category8')}}</option>
-                <option value="9">{{ trans('sentence.category9')}}</option>
-                <option value="10">{{ trans('sentence.category10')}}</option>
-                <option value="11">{{ trans('sentence.category11')}}</option>
-                <option value="12">{{ trans('sentence.category12')}}</option>
-                <option value="13">{{ trans('sentence.category13')}}</option>
-                <option value="14">{{ trans('sentence.category14')}}</option>
-            </select>
 
 
+                <label>{{ trans('sentence.category')}}</label>
+                <div class="input-field col s12">
+                    <select name="category" id="category">
+                        <option value="1">{{ trans('sentence.category1')}}</option>
+                        <option value="2">{{ trans('sentence.category2')}}</option>
+                        <option value="3">{{ trans('sentence.category3')}}</option>
+                        <option value="4">{{ trans('sentence.category4')}}</option>
+                        <option value="5">{{ trans('sentence.category5')}}</option>
+                        <option value="6">{{ trans('sentence.category6')}}</option>
+                        <option value="7">{{ trans('sentence.category7')}}</option>
+                        <option value="8">{{ trans('sentence.category8')}}</option>
+                        <option value="9">{{ trans('sentence.category9')}}</option>
+                        <option value="10">{{ trans('sentence.category10')}}</option>
+                        <option value="11">{{ trans('sentence.category11')}}</option>
+                        <option value="12">{{ trans('sentence.category12')}}</option>
+                        <option value="13">{{ trans('sentence.category13')}}</option>
+                        <option value="14">{{ trans('sentence.category14')}}</option>
+                    </select>
 
-            <button type="submit" class="btn btn-primary">{{ trans('sentence.create')}}</button>
+
+
+                    <button type="submit" class="btn btn-primary">{{ trans('sentence.create')}}</button>
             </form>
         </div>
     </div>
