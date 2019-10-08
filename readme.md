@@ -23,10 +23,10 @@ If you want to change it, go ahead an fork it :)
 
 
 ## ToDo
-- Do we need the original pictures?
-- change "add" Layout
-- change filtering
-- clean routes
-- clean code
-- Multiuser?
-- ?
+- [ ] Do we need the original pictures?
+- [x] change "add" Layout
+- [ ] change filtering
+- [ ] clean routes
+- [ ] clean code
+- [ ] Multiuser?
+- [ ] ?
