@@ -43,16 +43,16 @@ class RezeptController extends Controller
      */
     public function category(Request $request)
     {
-                if ($request->has('kate')) { 
-        $category1 = $request->input('kate');
-        $rezepts = Rezept::where('category', '=', $category1)->sortable()->paginate(10);
-        return view('rezepts.category', ['rezepts' => $rezepts]);
-                } else {
-                            $rezepts = Rezept::sortable()->paginate(10);
+        if ($request->has('kate')) {
+            $category1 = $request->input('kate');
+            $rezepts = Rezept::where('category', '=', $category1)->sortable()->paginate(10);
+            return view('rezepts.category', ['rezepts' => $rezepts]);
+        } else {
+            $rezepts = Rezept::sortable()->paginate(10);
 
-        return view('rezepts.category', ['rezepts' => $rezepts]);
-                }
-    }  
+            return view('rezepts.category', ['rezepts' => $rezepts]);
+        }
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -75,33 +75,32 @@ class RezeptController extends Controller
         'time'=> $request->get('time'),
         'persons'=> $request->get('persons'),
         'z1' => $request->get('z1'),
-'z2' => $request->get('z2'),
-'z3' => $request->get('z3'),
-'z4' => $request->get('z4'),
-'z5' => $request->get('z5'),
-'z6' => $request->get('z6'),
-'z7' => $request->get('z7'),
-'z8' => $request->get('z8'),
-'z9' => $request->get('z9'),
-'z10' => $request->get('z10'),
-'z11' => $request->get('z11'),
-'z12' => $request->get('z12'),
-'z13' => $request->get('z13'),
-'z14' => $request->get('z14'),
-'z15' => $request->get('z15'),
-'z16' => $request->get('z16'),
-'z17' => $request->get('z17'),
-'z18' => $request->get('z18'),
-'z19' => $request->get('z19'),
-'z20' => $request->get('z20'),
-'z21' => $request->get('z21'),
-'directions' => $request->get('directions'),
-'editor' => $request->get('editor'),
-'added' => $request->get('added'),
-'notes' => $request->get('notes'),
-'category' => $request->get('category'),
-
-      ]);
+        'z2' => $request->get('z2'),
+        'z3' => $request->get('z3'),
+        'z4' => $request->get('z4'),
+        'z5' => $request->get('z5'),
+        'z6' => $request->get('z6'),
+        'z7' => $request->get('z7'),
+        'z8' => $request->get('z8'),
+        'z9' => $request->get('z9'),
+        'z10' => $request->get('z10'),
+        'z11' => $request->get('z11'),
+        'z12' => $request->get('z12'),
+        'z13' => $request->get('z13'),
+        'z14' => $request->get('z14'),
+        'z15' => $request->get('z15'),
+        'z16' => $request->get('z16'),
+        'z17' => $request->get('z17'),
+        'z18' => $request->get('z18'),
+        'z19' => $request->get('z19'),
+        'z20' => $request->get('z20'),
+        'z21' => $request->get('z21'),
+        'directions' => $request->get('directions'),
+        'editor' => $request->get('editor'),
+        'added' => $request->get('added'),
+        'notes' => $request->get('notes'),
+        'category' => $request->get('category'),
+        ]);
         if ($request->has('pic')) {
             $image = $request->file('pic');
             $img = Image::make($image);
@@ -138,7 +137,6 @@ class RezeptController extends Controller
      */
     public function show($id)
     {
-
         $rezept = Rezept::find($id);
         return view('rezepts.show', array('rezept' => $rezept));
     }
