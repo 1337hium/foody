@@ -14,8 +14,18 @@ If you want to change it, go ahead an fork it :)
 - Change APP_URL
 - composer install
 - sudo chown -R www-data:www-data foody
-- `php artisan migrate`
 - `php artisan key:generate`
+- If you Use MariaDB, add following to app/Providers/AppServiceProvider.php
+```php
+<?php
+use Illuminate\Support\Facades\Schema;
+
+public function boot()
+{
+    Schema::defaultStringLength(191);
+}
+```
+- `php artisan migrate`
 - routes/web.php change Line 18 to 'Auth::routes(['register' => true]);'
 - got to https://your.app.url/register and register your user
 - change routes/web.php back to false
