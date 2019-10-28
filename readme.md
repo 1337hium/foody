@@ -19,7 +19,7 @@ If you want to change it, go ahead an fork it :)
 - routes/web.php change Line 18 to 'Auth::routes(['register' => true]);'
 - got to https://your.app.url/register and register your user
 - change routes/web.php back to false
-- mkdir public/upload/thumb
+- mkdir public/upload/tumb
 
 
 ## ToDo
