@@ -12,23 +12,7 @@
         <!-- Fonts -->
         <link rel="dns-prefetch" href="//fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-        <!--<script src="{{ asset('js/app.js') }}"></script>-->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <!--<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
- <link href="{{ asset('css/sb-admin-2.css') }}" rel="stylesheet" type="text/css" />
-<script src="{{ asset('js/app.js') }}" defer></script><Paste>
--->
-        <!-- 
-<script
-  src="https://code.jquery.com/jquery-2.2.4.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-Compiled and minified CSS -->
-        <!--<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
-  -->
-        <!-- Compiled and minified CSS -->
-        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <!-- Compiled and minified CSS -->
@@ -325,9 +309,6 @@ Compiled and minified CSS -->
                     </li>
                     <!----------- -->
                     <ul id="dropdown_nav_rz" class="dropdown-content">
-                        <li>
-                            <a class="dropdown-item" href="{{ route('rezepts.all') }}">{{ trans('sentence.all')}}</a>
-                        </li>
                         {{-- <li>
                             <a class="dropdown-item"
                                 href="{{ route('rezepts.menue') }}">{{ trans('sentence.category3')}}</a>

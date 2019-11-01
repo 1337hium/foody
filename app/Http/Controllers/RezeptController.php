@@ -22,14 +22,6 @@ class RezeptController extends Controller
      *
      * @return Response
      */
-    public function all()
-    {
-        $rezepts = Rezept::sortable()->paginate(10);
-
-        return view('rezepts.all', ['rezepts' => $rezepts]);
-//        return view('rezepts.index', compact('rezepts'));
-//
-    }
     public function index()
     {
         $rezepts = Rezept::orderBy('id', 'DESC')->sortable()->paginate(24);

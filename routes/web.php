@@ -14,22 +14,9 @@ use App\Rezept;
 URL::forceScheme('https');
 Route::resource('rezepts', 'RezeptController');
 Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'LanguageController@switchLang']);
-Route::get('all', 'RezeptController@all')->name('rezepts.all');
 Auth::routes(['register' => false]);
 Route::post('/category', 'RezeptController@category')->name('rezepts.category');
-
-
 Route::any('/category', array('as' => 'category', 'uses' => 'RezeptController@category'));
-
-//Route::any('/category', function () {
-//        $category1 = Request::get('category');
-//        $rezepts = Rezept::where('category', '=', $category1)->orderBy('id', 'DESC')->sortable()->paginate(24);
-//        return view('rezepts.category', ['rezepts' => $rezepts]);
-//});
-
-
-
-
 Route::get('/', 'RezeptController@index')->name('rezepts');
 Route::get('/home', 'RezeptController@index')->name('rezepts');
 Route::get('/profile', 'ProfileController@index')->name('profile');

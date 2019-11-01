@@ -1,6 +1,54 @@
 @extends('rezepts.nav')
 @section('content')
 <style>
+.masonry-wrapper {
+  padding: 1.5em;
+  max-width: 1300px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.masonry {
+  columns: 1;
+  column-gap: 5px;
+}
+.masonry-item {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 5px;
+}
+@media only screen and (max-width: 1023px) and (min-width: 768px) {  .masonry {
+    columns: 2;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .masonry {
+    columns: 4;
+  }
+}
+.masonry-item {
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, .3));
+  transition: filter .25s ease-in-out;
+}
+.masonry-item:hover {
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, .3));
+}
+.masonry-footer {
+  font-size: .75em;
+  opacity: .25;
+  text-align: center;
+  padding-top: 3em; 
+  padding-bottom: 3em;
+  margin-bottom: -1.5em;
+  transition: opacity 1s ease-in-out;
+}
+.masonry-footer a {
+  color: currentColor;
+}
+.masonry-footer:hover, .masonry-footer:active, .masonry-footer:focus {
+  opacity: .75;
+}
+
+
     .image {
         position: relative;
         width: 100%;
@@ -188,36 +236,23 @@ color:var(--main-color);
 </div><br />
 @endif
 <h1 align="center">{{ trans('sentence.rz_new')}}:</h1>
-<div">
-    <div class="row">
-        <div class="column1">
+  <div class="masonry-wrapper">
+    <div class="masonry">
             @foreach($rezepts as $rezept)
+        <div class="masonry-item">
             <a href="{{ route('rezepts.show',$rezept->id)}}">
                 <div class="hvrbox">
                     <img class="hvrbox-layer_bottom" src="{{ URL::to('/') }}/upload/tumb/{{ $rezept->tumb }}"
                         alt="{{$rezept->name}}" />
                     <div class="hvrbox-layer_top">
-                        <div class="hvrbox-text">{{ $rezept->name }}
-                            <div class="hvrbox-text_mobile">Rezept öffnen</div>
+                        <div class="hvrbox-text">{{ $rezept->name }} <br> {{ $rezept->time }}
+                           <div class="hvrbox-text_mobile">Rezept öffnen</div>
                         </div>
                     </div>
                 </div>
             </a>
 
-            @if ($loop->iteration == 6)
         </div>
-        <div class="column1">
-            @endif
-            @if ($loop->iteration == 12)
-        </div>
-        <div class="column1">
-            @endif
-            @if ($loop->iteration == 18)
-        </div>
-        <div class="column1">
-            @endif
             @endforeach
         </div>
-    </div>
-
     @endsection
