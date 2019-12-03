@@ -24,7 +24,7 @@ class RezeptController extends Controller
      */
     public function index()
     {
-        $rezepts = Rezept::orderBy('id', 'DESC')->sortable()->paginate(24);
+        $rezepts = Rezept::orderBy('id', 'DESC')->sortable()->paginate(12);
 
         return view('rezepts.index', ['rezepts' => $rezepts]);
     }
