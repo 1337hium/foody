@@ -40,4 +40,4 @@ public function boot()
 - [ ] clean routes
 - [ ] clean code
 - [ ] Multiuser?
-- [ ] ?
+- [ ] add ingredients dynamically
