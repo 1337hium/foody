@@ -32,6 +32,27 @@ public function boot()
 - change routes/web.php back to false
 - mkdir public/upload/tumb
 
+## Sample Apache Config
+Thanks to [clawer87](https://www.reddit.com/user/clawer87)
+```
+<IfModule mod_ssl.c>
+<VirtualHost *:443>
+    ServerName recipes.mydomain.com
+    DocumentRoot /var/www/foody/public/
+
+    <Directory /var/www/foody/>
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                allow from all
+    </Directory>
+
+Include /etc/letsencrypt/options-ssl-apache.conf
+SSLCertificateFile /etc/letsencrypt/live/mydomain.com/fullchain.pem
+SSLCertificateKeyFile /etc/letsencrypt/live/mydomain.com/privkey.pem
+</VirtualHost>
+</IfModule>
+```
 
 ## ToDo
 - [ ] Do we need the original pictures?
