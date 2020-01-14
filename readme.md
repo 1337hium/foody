@@ -9,6 +9,7 @@ If you want to change it, go ahead an fork it :)
 ## Installing
 
 - Clone this Repo
+- Set the DocumentRoot in your VirtualHost to the `public` Directory
 - cp .env.example .env
 - change Database Credentials
 - Change APP_URL
