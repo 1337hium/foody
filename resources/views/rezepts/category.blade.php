@@ -8,9 +8,9 @@
 
 </style>
 <div class="uper">
-    @if(session()->get('success'))
+    @if(session()->get('success1'))
     <div class="alert alert-success">
-        {{ session()->get('success') }}
+        {{ session()->get('success1') }}
     </div><br />
     @endif
     <table class="table table-striped">
@@ -24,8 +24,9 @@
 
 {{ csrf_field() }}
             <div class="input-field col s12">
-            <select name="category" id="category">
-<option value="">{{ trans('sentence.filter1')}}...</option>
+    <select class="mdb-select colorful-select dropdown-primary md-form" multiple searchable="Search here.." id="category">
+
+<option value="" disabled selected>{{ trans('sentence.filter1')}}...</option>
                     <option value="1">{{ trans('sentence.category1')}}</option>
                     <option value="2">{{ trans('sentence.category2')}}</option>
                     <option value="3">{{ trans('sentence.category3')}}</option>
@@ -43,7 +44,7 @@
                 </select>
 <input type="hidden" name="kate" id="kate" />
 <button type="submit"  name="submit" class="btn btn-primary">{{ trans('sentence.filter')}}</button>
-
+<button href="{{ route('rezepts.category') }}"  name="submit" class="btn btn-primary">Reset</button>
         </form>
 
 
@@ -58,8 +59,7 @@
             </tr>
         </thead>
         <tbody>
-
-            @foreach($rezepts as $rezept)
+           @foreach($rezepts as $rezept)
             <tr>
                 <td><a href="{{ route('rezepts.show',$rezept->id)}}"> {{$rezept->name}}</td>
                 <td>{{$rezept->time}}</td>
@@ -81,9 +81,12 @@
         </tbody>
     </table>
     {!! $rezepts->appends(\Request::except('page'))->render() !!}
-
     <div>
-        <script>
+<script>
+// Material Select Initialization
+$(document).ready(function() {
+$('.mdb-select').materialSelect();
+});
             $(".delete").on("submit", function () {
                 return confirm("{{ trans('sentence.confirm')}}");
             });

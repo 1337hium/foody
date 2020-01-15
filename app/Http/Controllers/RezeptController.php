@@ -36,12 +36,17 @@ class RezeptController extends Controller
     public function category(Request $request)
     {
         if ($request->has('kate')) {
-            $category1 = $request->input('kate');
-            $rezepts = Rezept::where('category', '=', $category1)->sortable()->paginate(10);
-            return view('rezepts.category', ['rezepts' => $rezepts]);
+            $searchWords = explode(',', $request->input('kate'));
+
+            $pages = Rezept::query();
+foreach($searchWords as $word){
+   $pages->orWhere('category', 'LIKE', ''.$word.'');
+
+}
+$pages1 = $pages->distinct()->paginate(10);
+        return view('rezepts.category', ['rezepts' => $pages1]);
         } else {
             $rezepts = Rezept::sortable()->paginate(10);
-
             return view('rezepts.category', ['rezepts' => $rezepts]);
         }
     }
