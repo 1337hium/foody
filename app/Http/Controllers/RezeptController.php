@@ -36,6 +36,7 @@ class RezeptController extends Controller
     public function category(Request $request)
     {
         if ($request->has('kate')) {
+<<<<<<< HEAD
             $searchWords = explode(',', $request->input('kate'));
 
             $pages = Rezept::query();
@@ -47,6 +48,14 @@ $pages1 = $pages->distinct()->paginate(10);
         return view('rezepts.category', ['rezepts' => $pages1]);
         } else {
             $rezepts = Rezept::sortable()->paginate(10);
+=======
+            $category1 = $request->input('kate');
+            $rezepts = Rezept::where('category', '=', $category1)->sortable()->paginate(10);
+            return view('rezepts.category', ['rezepts' => $rezepts]);
+        } else {
+            $rezepts = Rezept::sortable()->paginate(10);
+
+>>>>>>> fd6cbd4f6670a61f310789e43da84eabbe7f1335
             return view('rezepts.category', ['rezepts' => $rezepts]);
         }
     }
