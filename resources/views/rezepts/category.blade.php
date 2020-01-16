@@ -24,14 +24,9 @@
 
 {{ csrf_field() }}
             <div class="input-field col s12">
-<<<<<<< HEAD
     <select class="mdb-select colorful-select dropdown-primary md-form" multiple searchable="Search here.." id="category">
 
 <option value="" disabled selected>{{ trans('sentence.filter1')}}...</option>
-=======
-            <select name="category" id="category">
-<option value="">{{ trans('sentence.filter1')}}...</option>
->>>>>>> fd6cbd4f6670a61f310789e43da84eabbe7f1335
                     <option value="1">{{ trans('sentence.category1')}}</option>
                     <option value="2">{{ trans('sentence.category2')}}</option>
                     <option value="3">{{ trans('sentence.category3')}}</option>
