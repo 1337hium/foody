@@ -39,11 +39,11 @@ class RezeptController extends Controller
             $searchWords = explode(',', $request->input('kate'));
 
             $pages = Rezept::query();
-foreach($searchWords as $word){
-   $pages->orWhere('category', 'LIKE', ''.$word.'');
+            foreach($searchWords as $word){
+               $pages->orWhere('category', 'LIKE', ''.$word.'');
 
-}
-$pages1 = $pages->distinct()->paginate(10);
+            }
+        $pages1 = $pages->distinct()->paginate(10);
         return view('rezepts.category', ['rezepts' => $pages1]);
         } else {
             $rezepts = Rezept::sortable()->paginate(10);
