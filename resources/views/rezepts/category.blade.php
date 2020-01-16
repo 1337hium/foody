@@ -44,9 +44,8 @@
                 </select>
 <input type="hidden" name="kate" id="kate" />
 <button type="submit"  name="submit" class="btn btn-primary">{{ trans('sentence.filter')}}</button>
-<button href="{{ route('rezepts.category') }}"  name="submit" class="btn btn-primary">Reset</button>
         </form>
-
+<a href="{{ route('rezepts.category') }}"><button class="btn btn-primary">Reset</button></a>
 
         <thead>
             <tr>
