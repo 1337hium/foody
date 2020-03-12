@@ -3,7 +3,7 @@
 
 <body>
 <style>
-/* padding-bottom and top for image */
+
 .mfp-no-margins img.mfp-img {
 	padding: 0;
 }
@@ -178,57 +178,7 @@ uncomment this part if you haven't added this code anywhere else
                     <b><br>{{ trans('sentence.notes')}}:</b> <br>
                     {!! nl2br(e($rezept->notes)) !!} <br>
                     @endif
-
-                    <div class="no-print">
-<a class="image-popup-vertical-fit" href="{{ URL::to('/') }}/upload/{{ $rezept->pic }}" title="Caption. Can be aligned to any side and contain any HTML.">
-                        <img src="{{ URL::to('/') }}/upload/tumb/{{ $rezept->tumb }}" class="bild-center no-print"
-</a>
-                        <a href= "{{ URL::to('/') }}/upload/{{ $rezept->pic }}" rel='lightbox[image]' >
-                        <img src="{{ URL::to('/') }}/upload/tumb/{{ $rezept->tumb }}" class="bild-center no-print"
-                            style="max-height:450px;max-width:350px;height:auto;width:auto;" />
-                        </a>
-                    </div>
-
-
-
+<a data-fancybox="gallery" href="{{ URL::to('/') }}/upload/{{ $rezept->pic }}"><img src="{{ URL::to('/') }}/upload/tumb/{{ $rezept->tumb }}"></a>
 </body>
-<script<
-$(document).ready(function() {
-
-	$('.image-popup-vertical-fit').magnificPopup({
-		type: 'image',
-		closeOnContentClick: true,
-		mainClass: 'mfp-img-mobile',
-		image: {
-			verticalFit: true
-		}
-		
-	});
-
-	$('.image-popup-fit-width').magnificPopup({
-		type: 'image',
-		closeOnContentClick: true,
-		image: {
-			verticalFit: false
-		}
-	});
-
-	$('.image-popup-no-margins').magnificPopup({
-		type: 'image',
-		closeOnContentClick: true,
-		closeBtnInside: false,
-		fixedContentPos: true,
-		mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
-		image: {
-			verticalFit: true
-		},
-		zoom: {
-			enabled: true,
-			duration: 300 // don't foget to change the duration also in CSS
-		}
-	});
-
-});
-</script>
 </html>
 @endsection
